@@ -69,15 +69,32 @@ const person1 ={
         schoolGrade: "20", 
         isFFamily : true }
     
-console.log(calculateFinalScore(person2));
+// console.log(calculateFinalScore(person2));
 // console.log(calculateFinalScore({ name: "Rajib", testScore: 15,  schoolGrade: 25, isFFamily : true  }));
 
-console.log(calculateFinalScore({ name: "Rajib", testScore: 45,  schoolGrade: 25, isFFamily : true  }));
-console.log(calculateFinalScore("hello" ));
+// console.log(calculateFinalScore({ name: "Rajib", testScore: 45,  schoolGrade: 25, isFFamily : true  }));
+// console.log(calculateFinalScore("hello" ));
 
 
 // porblem 5
 
 function  waitingTime(waitingTimes  , serialNumber) {
+    
+    if(!Array.isArray(waitingTimes) || typeof serialNumber !== "number"){
+        return "Invalid Input";
+    }
 
+    let sum = 0;
+    for(number of waitingTimes){
+        sum = sum + number;
+    }
+    const count = waitingTimes.length;
+    let  avarage = Math.round(sum / count);
+    let serial = serialNumber - 1;
+    let mainSerial = serial - waitingTimes.length;
+    let time = Math.round(avarage * mainSerial);
+    return time;
 }
+
+const result= waitingTime([ 3, 5, 7, 11, 6 ], 10);
+// console.log(result)
