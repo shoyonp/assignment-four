@@ -21,10 +21,14 @@ function sendNotification(email) {
     if(typeof email !== 'string' || !email.includes('@')){
         return "Invalid Email"
     }
-    
+    const splitEmail = email.split('@');
+    const userName = splitEmail[0];
+    const domainName = splitEmail[1];
+    const notification = userName + ' sent you an email from ' + domainName
+    return notification;
 }
 
-const x = sendNotification('zihad.ph@gmail.com')
+const x = sendNotification('zihad@gmail.com')
 // console.log(x)
 
 // porblem 3
@@ -33,6 +37,7 @@ function checkDigitsInName(name) {
     if(typeof name !== 'string'){
         return "Invalid Input"
     }
+
 }
 
 
