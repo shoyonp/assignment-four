@@ -11,8 +11,8 @@ function calculateTax(income, expenses) {
         return tax;
 }
 
-// const result = calculateTax(34000, 1753);
-// console.log(result);
+const z = calculateTax(34000, 1753);
+// console.log(z);
 
 // problem 2
 
@@ -28,20 +28,19 @@ function sendNotification(email) {
     return notification;
 }
 
-const x = sendNotification('zihad@gmail.com')
+const x = sendNotification('farhan34@yahoo.com')
 // console.log(x)
 
 // porblem 3
 
 function checkDigitsInName(name) {
-
     if(typeof name !== 'string'){
         return "Invalid Input"
     }
 
     let str = name.split("");
 
-    for(array of str){
+    for(const array of str){
       if(!isNaN(array)){
         return true;
       }
@@ -49,8 +48,8 @@ function checkDigitsInName(name) {
     return false;
 }
 
-const y = checkDigitsInName("Raj7")
-console.log(y);
+const y = checkDigitsInName("@#")
+// console.log(y);
 
 
 // problem 4
@@ -83,7 +82,7 @@ const person1 ={
     const person2 ={ 
         name: "sojib", 
         testScore: 45,  
-        schoolGrade: "20", 
+        schoolGrade: 20, 
         isFFamily : true }
     
 // console.log(calculateFinalScore(person2));
@@ -113,5 +112,5 @@ function  waitingTime(waitingTimes  , serialNumber) {
     return time;
 }
 
-const result= waitingTime([ 3, 5, 7, 11, 6 ], 10);
+const result= waitingTime([7, 8, 3, 4, 5], "9");
 // console.log(result)
