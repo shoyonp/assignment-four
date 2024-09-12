@@ -34,11 +34,23 @@ const x = sendNotification('zihad@gmail.com')
 // porblem 3
 
 function checkDigitsInName(name) {
+
     if(typeof name !== 'string'){
         return "Invalid Input"
     }
 
+    let str = name.split("");
+
+    for(array of str){
+      if(!isNaN(array)){
+        return true;
+      }
+    }
+    return false;
 }
+
+const y = checkDigitsInName("Raj7")
+console.log(y);
 
 
 // problem 4
